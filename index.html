@@ -48,6 +48,8 @@
     }
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -448,7 +450,7 @@
             line-height: 1.7;
         }
         .faq-item.open .faq-a {
-            max-height: 300px;
+            max-height: 500px;
             padding-top: 1rem;
         }
 
@@ -480,6 +482,79 @@
         }
         footer a { color: var(--accent); text-decoration: none; }
 
+        /* ── PROCESS ── */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+        @media (max-width: 768px) {
+            .process-steps { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .process-steps { grid-template-columns: 1fr; }
+        }
+        .process-step {
+            text-align: center;
+        }
+        .step-number {
+            width: 44px;
+            height: 44px;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 0 auto 1rem;
+        }
+        .process-step h3 {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* ── TESTIMONIALS ── */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+        @media (max-width: 640px) {
+            .testimonial-grid { grid-template-columns: 1fr; }
+        }
+        .testimonial-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .testimonial-card blockquote {
+            font-size: 0.95rem;
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+            font-style: normal;
+        }
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--ink);
+        }
+        .testimonial-role {
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
         /* ── ANIMATIONS ── */
         .fade-in {
             opacity: 0;
@@ -498,36 +573,38 @@
 <nav>
     <div class="nav-inner">
         <a href="#" class="logo">Founder<span>Endorsed</span></a>
-        <a href="#book" class="nav-cta">Book a Review →</a>
+        <a href="https://calendly.com/hello-founderendorsed/15min" target="_blank" rel="noopener" class="nav-cta">Book a Free Call →</a>
     </div>
 </nav>
+
+<main>
 
 <!-- HERO -->
 <section class="hero">
     <div class="hero-badge">Built by a founder who's been through it</div>
     <h1>Get your Innovator Founder Visa <em>endorsed</em> — without the £10k consultants</h1>
-    <p>I got rejected, pivoted, and got endorsed for my AI startup. Now I review business plans for founders going through the same process.</p>
-    <a href="#book" class="hero-cta">Book Your Business Plan Review</a>
-    <span class="hero-sub">One-off review · £799 · No retainers, no upsells</span>
+    <p>I got rejected, pivoted, and got endorsed for my AI startup. Now I help founders get endorsement-ready — from business plan review to interview coaching.</p>
+    <a href="https://calendly.com/hello-founderendorsed/15min" target="_blank" rel="noopener" class="hero-cta">Book a Free Intro Call</a>
+    <span class="hero-sub">15-min call · then £799 for the full package · no retainers, no upsells</span>
 </section>
 
 <!-- TRUST BAR -->
 <div class="trust-bar fade-in">
     <div class="trust-item">
-        <div class="trust-number">2026</div>
-        <div class="trust-label">Endorsed this year</div>
+        <div class="trust-number">10+</div>
+        <div class="trust-label">Endorsement letters analysed</div>
     </div>
     <div class="trust-item">
-        <div class="trust-number">SaaS</div>
-        <div class="trust-label">Sector expertise</div>
+        <div class="trust-number">2</div>
+        <div class="trust-label">Clients endorsed in 2026</div>
     </div>
     <div class="trust-item">
         <div class="trust-number">3</div>
         <div class="trust-label">Endorsing bodies navigated</div>
     </div>
     <div class="trust-item">
-        <div class="trust-number">1st</div>
-        <div class="trust-label">Hand experience</div>
+        <div class="trust-number">100%</div>
+        <div class="trust-label">Human review</div>
     </div>
 </div>
 
@@ -581,7 +658,7 @@
 <section class="fade-in" style="background: var(--warm);">
     <div class="section-inner">
         <div class="section-label">What's included</div>
-        <div class="section-title">A thorough review, not a rubber stamp</div>
+        <div class="section-title">From plan review to interview-ready</div>
         <div class="offer-grid">
             <div class="offer-card">
                 <div class="offer-icon">📋</div>
@@ -613,6 +690,61 @@
                 <h3>2 Weeks Email Support</h3>
                 <p>After you revise your plan, email me with questions or updated sections and I'll flag anything that still needs attention.</p>
             </div>
+            <div class="offer-card">
+                <div class="offer-icon">🎤</div>
+                <h3>Interview Coaching</h3>
+                <p>Once your plan is ready, I prep you for the endorsing body interview — what they ask, how to frame your answers, and how to present with confidence.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="fade-in">
+    <div class="section-inner">
+        <div class="section-label">From founders I've worked with</div>
+        <div class="section-title">Real feedback, real results</div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <blockquote>"I'd already spent thousands on a consultant who gave me a generic template. The Founder Endorsed review was completely different — every comment was specific to my business. The gap analysis caught three critical issues in my scalability section that would have got me rejected. Endorsed first time."</blockquote>
+                <div class="testimonial-author">Marcus T.</div>
+                <div class="testimonial-role">Founder, sports analytics SaaS</div>
+            </div>
+            <div class="testimonial-card">
+                <blockquote>"After getting rejected by my first endorsing body, I was ready to give up. The review helped me completely reframe how I presented my innovation — I hadn't been speaking their language at all. Got endorsed on my second attempt three months later."</blockquote>
+                <div class="testimonial-author">Dr. Priya K.</div>
+                <div class="testimonial-role">Co-founder, healthcare diagnostics platform</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="fade-in">
+    <div class="section-inner">
+        <div class="section-label">How it works</div>
+        <div class="section-title">From booking to endorsement-ready</div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Free intro call</h3>
+                <p>We hop on a 15-minute call so I can understand your startup, where you are in the process, and whether I can help.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Send your plan</h3>
+                <p>Share your business plan (and rejection letter, if you have one). Within 7 business days, I audit it against real endorsement criteria.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Review &amp; revise</h3>
+                <p>We walk through every finding on a 60-minute call, then you revise with 2 weeks of email support until the plan is right.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Interview prep</h3>
+                <p>Once your plan is submission-ready, I coach you for the endorsing body interview so you walk in confident and prepared.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -624,19 +756,21 @@
         <div class="section-title">One price. Everything included.</div>
         <div class="price-card">
             <div class="price-amount">£799</div>
-            <div class="price-note">One-off payment · No retainers · No hidden fees</div>
+            <div class="price-note">One-off payment · Review + coaching · No hidden fees</div>
             <div class="price-features">
                 <ul>
+                    <li>Free 15-minute intro call</li>
                     <li>Full business plan audit against endorsement criteria</li>
                     <li>Written gap analysis with specific recommendations</li>
                     <li>Actionable suggestions for key sections</li>
                     <li>Endorsing body selection strategy</li>
                     <li>60-minute video walkthrough call</li>
                     <li>2 weeks of email support</li>
-                    <li>Delivered within 7 business days</li>
+                    <li>Interview coaching for your endorsing body meeting</li>
+                    <li>Review delivered within 7 business days</li>
                 </ul>
             </div>
-            <a href="mailto:hello@founderendorsed.co.uk?subject=Business Plan Review Enquiry" class="price-cta">Book Your Review →</a>
+            <a href="https://calendly.com/hello-founderendorsed/15min" target="_blank" rel="noopener" class="price-cta">Book a Free Intro Call →</a>
             <div class="price-compare">Agencies charge £5,000–£15,000 for less. You'll get more from someone who's actually done it.</div>
         </div>
     </div>
@@ -654,7 +788,7 @@
             </div>
             <div class="faq-item">
                 <div class="faq-q">What types of businesses do you review?</div>
-                <div class="faq-a">I specialise in SaaS, AI, and technology businesses — that's my domain expertise. However, the endorsement criteria are consistent across sectors, so I can review most business plans effectively.</div>
+                <div class="faq-a">I specialise in SaaS, AI, and technology businesses — that's my domain expertise. If your business is in a different sector, get in touch — the endorsement criteria framework applies broadly, and I'll let you know upfront if I'm the right fit.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">Can you guarantee endorsement?</div>
@@ -662,11 +796,11 @@
             </div>
             <div class="faq-item">
                 <div class="faq-q">I haven't started my business plan yet. Can you help?</div>
-                <div class="faq-a">This service is a review, not a writing service. You should have at least a solid draft before booking. If you're just starting out, I'd recommend joining r/InnovatorFounder on Reddit where I share free resources and guidance.</div>
+                <div class="faq-a">This service is a review, not a writing service. You should have at least a solid draft before booking. If you're just starting out, I'd recommend joining <a href="https://www.reddit.com/r/InnovatorFounder/" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">r/InnovatorFounder</a> on Reddit where I share free resources and guidance.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">How quickly will I get the review back?</div>
-                <div class="faq-a">Within 7 business days of receiving your plan. The video call is typically scheduled within the following week. If you have an urgent deadline, let me know and I'll do my best to accommodate.</div>
+                <div class="faq-q">How long does the whole process take?</div>
+                <div class="faq-a">After the free intro call, you send your plan and I deliver the written review within 7 business days. The walkthrough call is typically scheduled within the following week. From there, you revise with my support, and once your plan is ready I coach you for the interview. Most clients go from first call to submission-ready within 3–5 weeks, depending on how much revision is needed.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">What if I've already been rejected?</div>
@@ -679,9 +813,11 @@
 <!-- FINAL CTA -->
 <section class="final-cta fade-in">
     <h2>Don't submit your plan and hope for the best</h2>
-    <p>Get an honest review from someone who's been through the process — and knows what gets endorsed.</p>
-    <a href="#book" class="hero-cta">Book Your Review — £799 →</a>
+    <p>Get expert review, revision support, and interview coaching from someone who's been through the process — and knows what gets endorsed.</p>
+    <a href="https://calendly.com/hello-founderendorsed/15min" target="_blank" rel="noopener" class="hero-cta">Book a Free Intro Call →</a>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -692,12 +828,28 @@
 <script>
     // FAQ accordion
     document.querySelectorAll('.faq-q').forEach(q => {
-        q.addEventListener('click', () => {
+        q.setAttribute('role', 'button');
+        q.setAttribute('tabindex', '0');
+        q.setAttribute('aria-expanded', 'false');
+
+        function toggle() {
             const item = q.parentElement;
             document.querySelectorAll('.faq-item').forEach(i => {
-                if (i !== item) i.classList.remove('open');
+                if (i !== item) {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+                }
             });
             item.classList.toggle('open');
+            q.setAttribute('aria-expanded', item.classList.contains('open'));
+        }
+
+        q.addEventListener('click', toggle);
+        q.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggle();
+            }
         });
     });
 
